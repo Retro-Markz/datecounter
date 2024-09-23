@@ -11,6 +11,7 @@ function App() {
 
   return (
     <div className="container">
+      <input type="range" min={0} max={10} />
       <div className="card ">
         <button onClick={() => setStep((c) => c - 1)}> - </button>
         <p> step is {step}</p>
@@ -35,7 +36,7 @@ function App() {
         <span>{date.toDateString()}</span>
       </p>
 
-      <span>Version 1</span>
+      <span>Version 2</span>
     </div>
   );
 }
