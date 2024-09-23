@@ -50,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 12px;
 }
 
 .container {
@@ -57,4 +58,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.version {
+  padding-top: 32px;
 }

@@ -11,16 +11,25 @@ function App() {
 
   return (
     <div className="container">
-      <input type="range" min={0} max={10} />
       <div className="card ">
-        <button onClick={() => setStep((c) => c - 1)}> - </button>
+        <input
+          type="range"
+          min={0}
+          max={10}
+          value={step}
+          onChange={(e) => setStep(Number(e.target.value))}
+        />
+
         <p> step is {step}</p>
-        <button onClick={() => setStep((c) => c + 1)}> + </button>
       </div>
 
       <div className="card ">
         <button onClick={() => setCount((c) => c - step)}> - </button>
-        <p> count is {count}</p>
+        <input
+          type="number"
+          value={count}
+          onChange={(e) => setCount(Number(e.target.value))}
+        />
         <button onClick={() => setCount((c) => c + step)}> + </button>
       </div>
 
@@ -35,8 +44,9 @@ function App() {
 
         <span>{date.toDateString()}</span>
       </p>
+      <button onClick={() => setCount((c) => (c = 0))}>Reset</button>
 
-      <span>Version 2</span>
+      <span className="version">Version 2</span>
     </div>
   );
 }
